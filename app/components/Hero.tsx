@@ -15,7 +15,7 @@ export default function Hero() {
           {/* LEFT */}
           <div className="min-w-0">
             {/* ✅ small polish: leading + max width */}
-            <h1 className="text-6xl sm:text-7xl md:text-8xl font-extrabold leading-[0.95] max-w-[13ch]">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl font-extrabold leading-[0.95] max-w-[13ch]">
               PRECISION <br />
               PERFORMANCE <br />
               PROMOTION <br />

@@ -1,3 +1,5 @@
+"use client";
+
 import Reveal from "./Reveal";
 import Link from "next/link";
 
@@ -7,7 +9,8 @@ export default function WhyChooseUs() {
       {/* ✅ SAME WHITE BLOCK / CONTAINER (DON'T CHANGE) */}
       <div className="site-wrap py-20">
         {/* ✅ SAME LAYOUT (DON'T CHANGE) */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-32 items-center">
+        {/* Adjusted gap-32 to lg:gap-32 and gap-12 on mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-32 items-center">
           {/* ✅ LEFT CONTENT (DON'T CHANGE) */}
           <div className="min-w-0">
             <Reveal>
@@ -61,7 +64,7 @@ function StatCardTop({ big, label }: { big: string; label: string }) {
     <div
       className={[
         "bg-black text-white rounded-1xl",
-        "px-12 py-12",
+        "px-6 sm:px-12 py-12", // Responsive padding
         "w-full min-h-[100px]",
         "flex flex-col justify-center",
         "border border-black/10",
@@ -82,7 +85,7 @@ function StatCardWide({ big, label }: { big: string; label: string }) {
     <div
       className={[
         "bg-black text-white rounded-1xl",
-        "px-12 py-12",
+        "px-6 sm:px-12 py-12", // Responsive padding
         "w-full min-h-[180px]",
         "border border-black/10",
         "flex items-center",
