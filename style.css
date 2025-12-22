@@ -6,6 +6,7 @@ body {
   background: #FFFFFF;
   color: #000000;
 }
+
 /* HEADER */
 .iny-header-section .elementor-heading-title {
   font-weight: 700;
@@ -193,6 +194,7 @@ body {
 .iny-footer {
   border-top: 1px solid #E5E5E5;
 }
+
 /*
 Theme Name: Inyutek Figma Theme (Full with Icons)
 Theme URI: https://inyutek.com/
@@ -232,9 +234,9 @@ a {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding-inline: clamp(16px, 5vw, 80px);
 }
 
 /* HEADER */
@@ -676,9 +678,7 @@ a {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
+
 
   .header-inner {
     flex-direction: column;
