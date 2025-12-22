@@ -6,8 +6,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
       {/* Taller navbar + balanced padding */}
-      <div className="site-wrap h-24 px-8 lg:px-14 flex items-center">
-        
+      <div className="site-wrap h-24 flex items-center">
+
         {/* LEFT: Logo */}
         <div className="flex items-center">
           <Link

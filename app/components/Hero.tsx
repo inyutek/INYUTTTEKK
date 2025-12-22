@@ -10,7 +10,7 @@ export default function Hero() {
       className="min-h-screen flex items-center bg-white text-black overflow-x-hidden"
     >
       {/* ✅ added px-6 lg:px-10 so hero content not too left */}
-      <div className="site-wrap py-16 px-6 lg:px-10">
+      <div className="site-wrap py-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_520px] gap-12 items-center">
           {/* LEFT */}
           <div className="min-w-0">

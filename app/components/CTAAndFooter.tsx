@@ -7,7 +7,7 @@ export default function CTAAndFooter() {
   return (
     <section id="contact" className="w-full bg-black text-white">
       {/* Equal padding left & right */}
-      <div className="site-wrap px-8 sm:px-10 lg:px-14 py-28">
+      <div className="site-wrap py-28">
         {/* CTA */}
         <div className="text-center">
           <Reveal>
@@ -68,13 +68,13 @@ export default function CTAAndFooter() {
               through digital growth.
             </p>
             <div className="mt-6 text-sm font-semibold">
-  <a
-    href="mailto:inyutek@gmail.com"
-    className="hover:opacity-80 transition"
-  >
-    inyutek@gmail.com
-  </a>
-</div>
+              <a
+                href="mailto:inyutek@gmail.com"
+                className="hover:opacity-80 transition"
+              >
+                inyutek@gmail.com
+              </a>
+            </div>
 
           </div>
 
@@ -125,28 +125,28 @@ export default function CTAAndFooter() {
 
           <div className="flex gap-8 text-xs tracking-[0.25em] font-semibold">
             <div className="flex gap-8 text-xs tracking-[0.25em] font-semibold">
-  <a
-    href="https://www.linkedin.com/company/inyutek/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    LinkedIn
-  </a>
-  <a
-    href="https://x.com/inyutek"
-    target="_blank"
-    rel="noreferrer"
-  >
-    Twitter
-  </a>
-  <a
-    href="https://www.instagram.com/inyutek?igsh=YWc1dW14ajkyYmty"
-    target="_blank"
-    rel="noreferrer"
-  >
-    Instagram
-  </a>
-</div>
+              <a
+                href="https://www.linkedin.com/company/inyutek/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://x.com/inyutek"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Twitter
+              </a>
+              <a
+                href="https://www.instagram.com/inyutek?igsh=YWc1dW14ajkyYmty"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+            </div>
 
           </div>
         </div>

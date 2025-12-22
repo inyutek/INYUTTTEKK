@@ -5,7 +5,7 @@ export default function WhyChooseUs() {
   return (
     <section id="case-studies" className="w-full bg-white text-black">
       {/* ✅ SAME WHITE BLOCK / CONTAINER (DON'T CHANGE) */}
-      <div className="mx-auto w-full max-w-8xl px-6 py-20">
+      <div className="site-wrap py-20">
         {/* ✅ SAME LAYOUT (DON'T CHANGE) */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-32 items-center">
           {/* ✅ LEFT CONTENT (DON'T CHANGE) */}
@@ -44,10 +44,8 @@ export default function WhyChooseUs() {
                 <StatCardTop big="10+" label="INDUSTRIES SERVED" />
               </Reveal>
 
-              <Reveal delay={0.35}>
-                <div className="col-span-2">
-                  <StatCardWide big="98%" label="CLIENT SATISFACTION SCORE" />
-                </div>
+              <Reveal delay={0.35} className="col-span-2">
+                <StatCardWide big="98%" label="CLIENT SATISFACTION SCORE" />
               </Reveal>
             </div>
           </div>
