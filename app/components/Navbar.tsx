@@ -3,9 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Helper to check if we are on the homepage
+  const isHome = pathname === "/";
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
@@ -23,40 +28,48 @@ export default function Navbar() {
 
         {/* CENTER: Navigation (Desktop) */}
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-20">
-          <a
-            href="#services"
+          {!isHome && (
+            <Link
+              href="/"
+              className="text-sm tracking-[0.32em] font-semibold hover:opacity-70 transition"
+            >
+              HOME
+            </Link>
+          )}
+          <Link
+            href="/#services"
             className="text-sm tracking-[0.32em] font-semibold hover:opacity-70 transition"
           >
             SERVICES
-          </a>
+          </Link>
           <Link
             href="/case-studies"
             className="text-sm tracking-[0.32em] font-semibold hover:opacity-70 transition"
           >
             CASE STUDIES
           </Link>
-          <a
-            href="#blog"
+          <Link
+            href="/#newsletter"
             className="text-sm tracking-[0.32em] font-semibold hover:opacity-70 transition"
           >
-            BLOG
-          </a>
+            NEWSLETTER
+          </Link>
         </nav>
 
         {/* RIGHT: Action buttons (Desktop) */}
         <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="px-5 py-3 text-sm font-semibold border border-black bg-black text-white hover:opacity-90 transition"
           >
-            Contact
-          </a>
-          <a
-            href="#subscribe"
+            Book a call
+          </Link>
+          <Link
+            href="/#subscribe"
             className="px-5 py-3 text-sm font-semibold border border-black bg-white text-black hover:bg-black hover:text-white transition"
           >
             Subscribe
-          </a>
+          </Link>
         </div>
 
         {/* MOBILE: Hamburger Button */}
@@ -90,13 +103,22 @@ export default function Navbar() {
             className="lg:hidden fixed inset-0 top-24 bg-white z-40 overflow-hidden flex flex-col items-center pt-10 gap-8"
           >
             <nav className="flex flex-col items-center gap-8">
-              <a
-                href="#services"
+              {!isHome && (
+                <Link
+                  href="/"
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg tracking-[0.32em] font-semibold"
+                >
+                  HOME
+                </Link>
+              )}
+              <Link
+                href="/#services"
                 onClick={() => setIsOpen(false)}
                 className="text-lg tracking-[0.32em] font-semibold"
               >
                 SERVICES
-              </a>
+              </Link>
               <Link
                 href="/case-studies"
                 onClick={() => setIsOpen(false)}
@@ -104,30 +126,30 @@ export default function Navbar() {
               >
                 CASE STUDIES
               </Link>
-              <a
-                href="#blog"
+              <Link
+                href="/#newsletter"
                 onClick={() => setIsOpen(false)}
                 className="text-lg tracking-[0.32em] font-semibold"
               >
-                BLOG
-              </a>
+                NEWSLETTER
+              </Link>
             </nav>
 
             <div className="flex flex-col items-center gap-4 mt-4">
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 onClick={() => setIsOpen(false)}
                 className="px-8 py-3 text-sm font-semibold border border-black bg-black text-white"
               >
-                Contact
-              </a>
-              <a
-                href="#subscribe"
+                Book a call
+              </Link>
+              <Link
+                href="/#subscribe"
                 onClick={() => setIsOpen(false)}
                 className="px-8 py-3 text-sm font-semibold border border-black bg-white text-black"
               >
                 Subscribe
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

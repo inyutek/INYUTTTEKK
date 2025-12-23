@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -7,8 +6,6 @@ import CTAAndFooter from "./components/CTAAndFooter";
 export default function HomePage() {
   return (
     <>
-      <Navbar />
-
       <main>
         {/* 0) HERO */}
         <div id="top" className="min-h-screen w-full bg-white text-black">
